@@ -1,0 +1,104 @@
+/* Section 1: Hero Featured Layout */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #111111 0%, #222222 100%);
+  color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  font-size: 42px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: #cccccc;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Sections Shared Grid Structure */
+.top-news-section, .tech-section {
+  margin-bottom: 50px;
+}
+
+.top-news-section h2, .tech-section h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* Red indicator line below section headers */
+.top-news-section h2::after, .tech-section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background-color: #ff4757;
+  border-radius: 2px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* Section 3: Industry Highlights Banner */
+.banner-section {
+  background-color: #ff4757;
+  color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 16px rgba(255, 71, 87, 0.2);
+}
+
+.banner-section h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.subscribe-btn {
+  background-color: #ffffff;
+  color: #ff4757;
+  padding: 14px 28px;
+  font-size: 16px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.subscribe-btn:hover {
+  background-color: #f1f2f6;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 32px;
+  }
+  
+  .banner-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 30px 20px;
+  }
+  
+  .banner-section h3 {
+    font-size: 20px;
+  }
+}
